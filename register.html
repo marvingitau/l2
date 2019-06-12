@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="deps/bootstrap.min.css">
+        <script src="deps/jquery-3.1.1.min.js"></script>
+        <script src="deps/bootstrap.min.js"></script>
+
+        <style>
+         body{
+             /* background-color: black; */
+             background-image: url('node.jpg');
+         }
+         header{
+             background-color:rgb(40, 173, 206);
+         }
+         .logo{
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 50%;
+         }
+         section{
+             /* background-color: rgb(45, 45, 77); */
+             background-image: url('node.jpg');
+             
+         }
+         .label{
+             color:rgba(106, 225, 230, 0.65);
+             font-size: 25px;
+             font-style: bold;
+             padding-left: 0%;
+
+         }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <header>
+                <div class="row">
+                    <!-- <div class="col-lg-12"> -->
+                    <img src="logo.png" class="logo" draggable="false" height="300px" width="300px">
+                        <!-- <a href="#"><img src="logo.png" class="logo" draggable="false" height="300px" width="300px"></a> -->
+                    <!-- </div> -->
+                </div>
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form action="verif.php" class="" role="form" method="POST">
+
+                            <div class="form-group">
+                                <label for="username" class=" label">username</label>
+                                <input type="text" class="form-control" required id="usename" name="username" placeholder="Enter username">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mail" class="label">email</label>
+                                <input type="email" class="form-control" required id="email" name="email" placeholder="Enter email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passcode1" class="label">passcode</label>
+                                <input type="password" class="form-control" required id="passcode1" name="passcode1" placeholder="Enter passcode">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passcode2" class="label">re enter password</label>
+                                <input type="password" class="form-control" required id="passcode2" name="passcode2" placeholder="Re Enter Passcode">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-default">Register</button>
+                            &nbsp; 
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </body>
+</html>
