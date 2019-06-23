@@ -57,6 +57,10 @@ session_start();
              /* border: 1px solid red; */
              
          }
+         small{
+            color:#999;
+            font-style: italic;
+            }
          .label{
              color:rgba(40, 173, 206, 0.719);
              font-size: 30px;
@@ -127,7 +131,7 @@ session_start();
                             <div id="list" class="panel-collapse collapse">
                                     <ul class="list-group">
                                         <li class="list-group-item">setting</li>
-                                        <li class="list-group-item"><a href="logpage.html">Log Out</a></li>
+                                        <li class="list-group-item"><a href="logout.php">Log Out</a></li>
                                     </ul>
                             </div>
                         </div>
@@ -139,7 +143,28 @@ session_start();
                    
                     <div class="col-sm-10 col-lg-9">
                             <section>
-                                 <p style="color:white;text-align:center;font-size:1.1em;" >MESSAGING</p>
+                                 <p style="color:white;text-align:center;font-size:1.1em;" >MESSAGING &nbsp;<small onmouseover="mover(this)" onmouseout="mout(this)"  data-toggle="modal" data-target="#formFriend">create_allies</small></p>
+                                <!-- create friend section -->
+                                 <form action="#" role= "form" method="GET" enctype = "multipart/formdata">
+                                        <div id="formFriend" class = "modal fade" role="dialog">
+                                            <div class="modal-dialog">
+                                                <div class = "modal-content">
+                                                    <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    <h4 class="modal-title">User you may Know</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <select>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                    <div class = "modal-footer">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </form>
+                                
                                 <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#userInput">Create Msg</button>
                                 <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#userInput1" style="float:right;">View Prev msg</button>
                                 <div id="userInput" class="collapse">
@@ -147,10 +172,11 @@ session_start();
                                         <div class="form-group">
                                                 <label for="msgArea">Msg</label>
                                                 <textarea class="form-control" id="msgArea" rows="6" name="msgValue"></textarea>
-                                                <button type="button" class="btn btn-dafault" data-toggle="modal" data-target="#myModal">Send to</button>
+                                                <button type="button" class="btn btn-dafault" data-toggle="modal" data-target="#myFriends">Send to</button>
                                                 <!-- UPLOAD FILE -->
                                                 <input type = "file" class ="form-control-file" name="upFile"/>
-                                                <div id="myModal" class="modal fade" role="dialog">
+
+                                                <div id="myFriends" class="modal fade" role="dialog">
                                                     <div class="modal-dialog">
                                                         <!-- Modal contents -->
                                                         <div class="modal-content">
@@ -273,7 +299,17 @@ session_start();
 
     </body>
     <script>
-    
+
+    function mover(obj){
+        
+        obj.style.border = "1px solid rgba(106, 225, 230, 0.65)";
+        //alert('allies');
+    }
+    function mout(obj){
+        
+        obj.style.border = "1px solid rgba(106, 225, 230, 0)";
+        //alert('allies');
+    }
     function userVal(id,val){
         switch(val){
                     case 'n':

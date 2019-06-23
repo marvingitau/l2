@@ -50,7 +50,7 @@
             <section>
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="verif.php" class="" role="form" method="POST">
+                        <form action="verif.php" class="" role="form" method="POST" autocomplete="off">
 
                             <div class="form-group">
                                 <label for="username" class=" label">username</label>
@@ -72,7 +72,9 @@
                                 <input type="password" class="form-control" required id="passcode2" name="passcode2" placeholder="Re Enter Passcode">
                             </div>
                             
+                            <a href="./index.html" class="btn btn-default" role="button">&larr; back </a>
                             <button type="submit" class="btn btn-default">Register</button>
+                           
                             &nbsp; 
                         </form>
                     </div>
